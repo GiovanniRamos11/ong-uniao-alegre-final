@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ONG União Alegre - Projetos</title>
+  <meta name="description" content="Conheça os projetos sociais da ONG União Alegre e suas ações de impacto comunitário."/>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Cards de Projetos ===== */
+    .cards-projetos {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    .card-projeto {
+      flex: 1 1 0; /* desktop: cards lado a lado, ocupando toda tela */
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .projeto-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-texto {
+      padding: 1.5rem;
+      color: #063970;
+      text-align: left;
+      flex: 1 1 auto; /* garante que o conteúdo seja visível */
+    }
+
+    .card-texto h2 {
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+    }
+
+    .card-texto p {
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    /* ===== Responsividade Mobile ===== */
+    @media (max-width: 700px) {
+      .cards-projetos {
+        flex-direction: column;
+        align-items: center; /* centraliza os cards na tela */
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .card-projeto {
+        flex: 0 1 90%;
+        max-width: 90%;
+      }
+
+      .card-texto {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .card-texto h2 {
+        font-size: 1.3rem;
+      }
+
+      .card-texto p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="site">
+  <!-- CABEÇALHO -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo-ong.jpg" alt="Logo da ONG União Alegre" class="logo expandida">
+      </a>
+
+      <nav aria-label="Menu principal" role="navigation">
+        <input id="nav-toggle" class="mobile-toggle" type="checkbox" aria-hidden="true">
+        <label for="nav-toggle" class="mobile-toggle" aria-hidden="true">☰</label>
+
+        <ul class="desktop-menu" role="menubar">
+          <li><a href="index.html" class="menu-link spa-link">Início</a></li>
+          <li><a href="projetos.html" class="menu-link ativo spa-link" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html" class="menu-link spa-link">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="app" class="container" role="main">
+    <section class="intro">
+      <h1>Nossos Projetos</h1>
+      <p>Conheça as principais iniciativas da ONG União Alegre e descubra como estamos transformando vidas com solidariedade, educação e inclusão digital.</p>
+    </section>
+
+    <section class="projetos-section">
+      <div class="cards-projetos">
+        <!-- Projeto Esperança -->
+        <article id="esperanca" class="card-projeto">
+          <img src="images/projeto-esperanca.png" alt="Crianças participando do Projeto Esperança" class="projeto-img">
+          <div class="card-texto">
+            <h2>Projeto Esperança</h2>
+            <p>
+              O Projeto Esperança oferece reforço escolar, apoio emocional e atividades culturais para crianças e adolescentes em situação de vulnerabilidade social.
+            </p>
+            <p>
+              Com o trabalho de voluntários dedicados, buscamos fortalecer o aprendizado, o convívio social e os valores humanos.
+            </p>
+          </div>
+        </article>
+
+        <!-- Projeto Conectar -->
+        <article id="conectar" class="card-projeto">
+          <img src="images/projeto-conectar.png" alt="Aula de informática do Projeto Conectar" class="projeto-img">
+          <div class="card-texto">
+            <h2>Projeto Conectar</h2>
+            <p>
+              Focado em inclusão digital, o Projeto Conectar oferece cursos gratuitos de informática básica e profissionalizante para jovens e adultos.
+            </p>
+            <p>
+              O objetivo é proporcionar oportunidades no mercado de trabalho e promover o uso consciente da tecnologia como ferramenta de transformação social.
+            </p>
+          </div>
+        </article>
+
+        <!-- Ações Comunitárias -->
+        <article id="acoes" class="card-projeto">
+          <img src="images/acoes-comunitarias.png" alt="Voluntários em ação no bairro" class="projeto-img">
+          <div class="card-texto">
+            <h2>Ações Comunitárias</h2>
+            <p>
+              Além dos projetos fixos, a ONG União Alegre realiza campanhas solidárias, mutirões de limpeza e arrecadações de alimentos para famílias em necessidade.
+            </p>
+            <p>
+              Cada ação reforça o compromisso com a comunidade e o propósito de espalhar união e alegria.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© 2025 ONG União Alegre — Juntos Transformamos Vidas.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/formValidation.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

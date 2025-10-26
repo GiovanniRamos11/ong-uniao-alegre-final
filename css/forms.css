@@ -1,0 +1,39 @@
+/* forms.css */
+/* ---------- Formulários estilizados ---------- */
+form{
+  background:var(--neutral-200);
+  padding:var(--space-3);
+  border-radius:10px;
+  max-width:700px;
+}
+label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+input, select, textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid var(--neutral-400);
+  border-radius:6px;
+  margin-bottom:var(--space-2);
+  font-size:var(--text-base);
+}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--primary-500);
+  border-color:var(--primary-700);
+}
+input:invalid{
+  border-color:#e53935;
+}
+button[type=submit]{
+  background:var(--secondary-600);
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+button[type=submit]:hover{
+  background:var(--primary-500);
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ONG União Alegre - Início</title>
+  <meta name="description" content="ONG União Alegre - transformando vidas por meio da solidariedade, educação e inclusão digital."/>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Layout da Seção Voluntários + História + Notícias ===== */
+    .voluntarios-container {
+      display: flex;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      justify-content: flex-start;
+    }
+
+    .noticias-barra {
+      flex: 0 0 220px;
+      background-color: #f0f4ff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      height: 400px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .noticia-item {
+      border-bottom: 1px solid #ccc;
+      padding: 0.5rem 0;
+      color: #063970;
+      font-size: 0.95rem;
+    }
+
+    .noticias-list {
+      display: flex;
+      flex-direction: column;
+      animation: scrollNoticias 30s linear infinite;
+    }
+
+    @keyframes scrollNoticias {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    .voluntarios-historia {
+      flex: 1 1 auto;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .voluntarios-historia figure {
+      margin: 0;
+      flex: 0 0 400px;
+    }
+
+    .voluntarios-historia img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.25);
+    }
+
+    .historia-ong {
+      background-color: rgba(255,255,255,0.95);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex: 1;
+    }
+
+    /* ===== Bloco de Doações Compacto ===== */
+    .bloco-branco.doacoes {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1rem;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      max-width: 1100px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .doacoes-lista {
+      display: flex;
+      flex-wrap: nowrap; /* todos em linha */
+      overflow-x: auto; /* rolagem horizontal no mobile */
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      padding-bottom: 0.3rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .doacoes-lista div {
+      flex: 0 0 auto;
+      min-width: 80px;
+      background-color: #f0f4ff;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #063970;
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+
+    .doacoes-lista div:hover {
+      transform: scale(1.05);
+      background-color: #e0ebff;
+    }
+
+    .doacoes-lista::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Bloco Nossa Missão */
+    .missao {
+      text-align: center;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .missao .valores-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .missao .valor {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .missao .valor:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== Responsividade ===== */
+    @media (max-width: 900px) {
+      .voluntarios-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .voluntarios-historia {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .voluntarios-historia figure {
+        flex: 0 0 90%;
+      }
+
+      .historia-ong {
+        width: 90%;
+        margin-top: 1rem;
+      }
+
+      .noticias-barra {
+        width: 90%;
+        height: 250px;
+        margin-bottom: 1rem;
+      }
+
+      .bloco-branco.doacoes {
+        padding: 0.5rem 1rem;
+        margin: 1rem auto;
+      }
+
+      .bloco-branco.doacoes h2 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .bloco-branco.doacoes p {
+        font-size: 0.7rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .doacoes-lista div {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+        min-width: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body class="site">
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo-ong.jpg" alt="Logo da ONG União Alegre" class="logo expandida">
+      </a>
+      <nav aria-label="Menu principal" role="navigation">
+        <input id="nav-toggle" class="mobile-toggle" type="checkbox" aria-hidden="true">
+        <label for="nav-toggle" class="mobile-toggle" aria-hidden="true">☰</label>
+        <ul class="desktop-menu" role="menubar">
+          <li><a href="index.html" aria-current="page" class="menu-link ativo spa-link">Início</a></li>
+          <li><a href="projetos.html" class="menu-link spa-link">Projetos</a></li>
+          <li><a href="cadastro.html" class="menu-link spa-link">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="container" role="main">
+    <section class="intro">
+      <h1>Bem-vindo à ONG União Alegre 💙</h1>
+      <p>
+        Somos uma organização sem fins lucrativos dedicada a promover <strong>educação, solidariedade e inclusão digital</strong>.
+        Acreditamos que juntos podemos transformar vidas e construir um futuro mais justo e alegre.
+      </p>
+      <a href="cadastro.html" class="btn destaque spa-link">Seja Voluntário</a>
+    </section>
+
+    <!-- ===== Bloco de Doações Compacto ===== -->
+    <section class="bloco-branco doacoes">
+      <h2>Doe e Faça a Diferença 💙</h2>
+      <p>
+        Aceitamos doações de qualquer valor – <strong>qualquer quantia de coração será bem-vinda!</strong><br>
+        Também recebemos itens que ajudam nossas ações:
+      </p>
+      <div class="doacoes-lista">
+        <div>👕 Roupas</div>
+        <div>🍲 Alimentos</div>
+        <div>👟 Calçados</div>
+        <div>🛏️ Cobertores</div>
+        <div>📱 Celulares / 💻 PCs</div>
+        <div>🎮 Video Games</div>
+      </div>
+    </section>
+
+    <section class="bloco-branco voluntarios">
+      <h3>Nosso Grupo de Voluntários</h3>
+      <p>
+        Este é nosso grupo de São Paulo se encontrando em uma praça para fazer o bem, 
+        compartilhando alegria, dedicação e amor pelo próximo.
+      </p>
+    </section>
+
+    <section class="voluntarios-container">
+      <aside class="noticias-barra">
+        <div class="noticias-list">
+          <div class="noticia-item">📢 Esse mês arrecadamos 500 kg de alimentos!</div>
+          <div class="noticia-item">🌟 Nossa ONG está crescendo rapidamente em São Paulo.</div>
+          <div class="noticia-item">👥 Recebemos visita do vereador local para conhecer nosso trabalho.</div>
+          <div class="noticia-item">📚 Novos cursos de informática começaram esta semana.</div>
+          <div class="noticia-item">🎁 Doações de brinquedos para crianças carentes foram entregues.</div>
+          <div class="noticia-item">💙 Mais de 100 voluntários participaram das ações neste mês.</div>
+          <div class="noticia-item">🏫 Parcerias com escolas estão ajudando mais jovens.</div>
+          <div class="noticia-item">📸 Confira fotos de nossas últimas atividades no Instagram.</div>
+          <div class="noticia-item">📢 Esse mês arrecadamos 500 kg de alimentos!</div>
+          <div class="noticia-item">🌟 Nossa ONG está crescendo rapidamente em São Paulo.</div>
+        </div>
+      </aside>
+
+      <div class="voluntarios-historia">
+        <figure>
+          <img src="images/voluntarios.png" alt="Voluntários da ONG União Alegre em ação" class="hero-img">
+          <figcaption>Voluntários da ONG União Alegre em ação</figcaption>
+        </figure>
+        <div class="historia-ong">
+          <h3>História da ONG</h3>
+          <p>
+            A ONG União Alegre foi fundada por Giovanni Oliveira em 2015 com o objetivo de apoiar comunidades carentes, promovendo educação, inclusão digital e solidariedade.
+            Desde então, crescemos a cada ano, recebendo voluntários apaixonados pelo bem e realizando diversas ações que impactam positivamente a vida de centenas de pessoas.
+            Nossa missão é criar oportunidades e compartilhar alegria, transformando vidas por meio de projetos sociais, doações e capacitação.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="missao">
+      <h2>Nossa Missão</h2>
+      <p>Fortalecer comunidades através da educação, cultura e oportunidades tecnológicas, criando pontes para o futuro.</p>
+
+      <div class="valores-grid">
+        <article class="valor">
+          <h3>🤝 Solidariedade</h3>
+          <p>Juntos, apoiamos famílias e indivíduos que mais precisam.</p>
+        </article>
+        <article class="valor">
+          <h3>📚 Educação</h3>
+          <p>Projetos que incentivam o aprendizado e o crescimento pessoal.</p>
+        </article>
+        <article class="valor">
+          <h3>💻 Inclusão Digital</h3>
+          <p>Capacitamos pessoas para o uso da tecnologia como ferramenta de transformação.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© 2025 ONG União Alegre — Juntos Transformamos Vidas.</p>
+    </div>
+  </footer>
+
+  <script>
+    const noticiasList = document.querySelector('.noticias-list');
+    let scrollTop = 0;
+    const scrollStep = 0.3;
+    function scrollNoticias() {
+      scrollTop += scrollStep;
+      if (scrollTop >= noticiasList.scrollHeight / 2) scrollTop = 0;
+      noticiasList.style.transform = `translateY(-${scrollTop}px)`;
+      requestAnimationFrame(scrollNoticias);
+    }
+    scrollNoticias();
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro realizado com sucesso - ONG União Alegre</title>
+  <meta name="description" content="Confirmação de cadastro realizado com sucesso na ONG União Alegre." />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ===== Introdução centralizada ===== */
+    .intro {
+      text-align: center;
+      margin: 80px auto 40px;
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+
+    .intro h1 {
+      color: #2ecc71;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    /* ===== Botões centralizados ===== */
+    .acoes-sucesso {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 40px auto 80px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .acoes-sucesso a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1em;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .acoes-sucesso a:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Voltar ao Início */
+    .btn.padrao {
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+    }
+
+    .btn.padrao:hover {
+      background-color: #34495e;
+    }
+
+    /* Ver Projetos */
+    .btn.ver-projetos {
+      background-color: #fff;
+      color: #2ecc71;
+      border: 2px solid #2ecc71;
+    }
+
+    .btn.ver-projetos:hover {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+
+    /* ===== Responsividade Mobile ===== */
+    @media (max-width: 700px) {
+      .intro h1 {
+        font-size: 1.8em;
+      }
+
+      .intro p {
+        font-size: 1em;
+      }
+
+      .acoes-sucesso {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .acoes-sucesso a {
+        width: 80%;
+        font-size: 0.95em;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="site">
+  <!-- CABEÇALHO -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo-ong.jpg" alt="Logo da ONG União Alegre" class="logo expandida" />
+      </a>
+
+      <nav aria-label="Menu principal" role="navigation">
+        <input id="nav-toggle" class="mobile-toggle" type="checkbox" aria-hidden="true" />
+        <label for="nav-toggle" class="mobile-toggle" aria-hidden="true">☰</label>
+
+        <ul class="desktop-menu" role="menubar">
+          <li><a href="index.html" class="menu-link spa-link">Início</a></li>
+          <li><a href="projetos.html" class="menu-link spa-link">Projetos</a></li>
+          <li><a href="cadastro.html" class="menu-link ativo spa-link" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="app" class="container" role="main">
+    <section class="intro">
+      <h1>✅ Cadastro realizado com sucesso!</h1>
+      <p>Obrigado por se cadastrar na <strong>ONG União Alegre</strong>! Seus dados foram enviados com sucesso.</p>
+      <p>Você pode voltar à página inicial ou conhecer nossos projetos abaixo.</p>
+    </section>
+
+    <section class="acoes-sucesso">
+      <a href="index.html" class="btn padrao">🏠 Voltar ao Início</a>
+      <a href="projetos.html" class="btn ver-projetos">🌱 Ver Projetos</a>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© 2025 ONG União Alegre — Juntos Transformamos Vidas.</p>
+    </div>
+  </footer>
+
+  <script src="js/ui.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

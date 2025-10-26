@@ -1,0 +1,566 @@
+/* ===== Fundo do Site ===== */
+body {
+  background: url("../images/fundo-site.png") no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f8faff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Cabeçalho e Logo ===== */
+.site-header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #ddd;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.logo.expandida {
+  width: 170px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ===== Menu de Navegação ===== */
+.desktop-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu li {
+  display: inline-block;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #063970;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.3rem 0.5rem;
+}
+
+.menu-link:hover {
+  color: #0b4d8f;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #0b4d8f;
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after,
+.menu-link.ativo::after {
+  width: 100%;
+}
+
+/* Remove checkbox do menu mobile no desktop */
+.mobile-toggle {
+  display: none;
+}
+
+/* ===== Seção de Boas-Vindas ===== */
+.intro {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: #063970;
+}
+
+.intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.btn,
+.btn.destaque {
+  background-color: #063970;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn.destaque:hover {
+  background-color: #0b4d8f;
+}
+
+/* ===== Imagem Principal ===== */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-left: 0;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Sessão de Missão e Valores ===== */
+.missao {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  max-width: 1100px;
+}
+
+.missao h2 {
+  color: #063970;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.valor {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.valor:hover {
+  transform: scale(1.05);
+}
+
+.valor h3 {
+  color: #063970;
+  margin-bottom: 0.4rem;
+}
+
+/* ===== Página de Projetos ===== */
+.cards-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.card-projeto {
+  flex: 1 1 0;
+  max-width: calc((100% - 4rem)/3);
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+}
+
+.card-texto {
+  padding: 1.5rem;
+  color: #063970;
+  text-align: left;
+  flex: 1 1 auto;
+}
+
+.card-texto h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.card-texto p {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* ===== Chamada “Faça Parte” ===== */
+.call-to-action {
+  text-align: center;
+  margin: 3rem auto 2rem;
+}
+
+.call-img {
+  width: 70%;
+  max-width: 750px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.call-img:hover {
+  transform: scale(1.03);
+}
+
+.call-to-action figcaption {
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  color: #063970;
+  font-weight: 600;
+}
+
+/* ===== Página de Cadastro ===== */
+.form-section {
+  max-width: 900px;
+  margin: 2.5rem auto 5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 3rem;
+  text-align: left;
+}
+
+.form-section legend {
+  color: #063970;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #063970;
+  padding-bottom: 0.3rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  color: #063970;
+  margin-bottom: 0.3rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: #0b4d8f;
+  box-shadow: 0 0 6px rgba(11, 77, 143, 0.3);
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+.consentimento {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.btn.destaque {
+  display: block;
+  margin: 2rem auto 0;
+  background-color: #063970;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.destaque:hover {
+  background-color: #0b4d8f;
+  transform: scale(1.04);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 2px solid #ddd;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #063970;
+  margin-top: 3rem;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .desktop-menu {
+    gap: 1rem;
+  }
+
+  .card-projeto {
+    flex: 0 1 90%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .card-texto {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn.destaque {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .bloco-branco {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .doacoes-lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .doacoes-lista div {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+
+  .hero-historia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .historia-bloco {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-projetos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card-projeto {
+    flex: 0 1 250px;
+    max-width: 90%;
+  }
+
+  .card-texto h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-texto p {
+    font-size: 0.95rem;
+  }
+
+  .doacoes-lista {
+    flex-direction: column;
+  }
+
+  .doacoes-lista div {
+    flex: 1 1 100%;
+  }
+}
+
+/* ===== Blocos brancos, Doações e Voluntários ===== */
+.bloco-branco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  max-width: 1100px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.doacoes-voluntarios {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  background: rgba(255,255,255,0.95);
+  padding: 3rem 2rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.doacoes-voluntarios h2 {
+  color: #063970;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.doacoes-voluntarios h3 {
+  color: #063970;
+  font-size: 1.6rem;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.doacoes-voluntarios p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.doacoes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.doacoes-lista div {
+  background-color: #f0f4ff;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #063970;
+  flex: 1 1 150px;
+  text-align: center;
+  transition: transform 0.
+@media (max-width: 900px) {
+  /* Bloco de doações mais compacto */
+  .bloco-branco.doacoes {
+    width: 95%;
+    padding: 0.5rem 1rem; /* menos espaço vertical */
+    margin: 1rem auto;
+  }
+
+  .bloco-branco.doacoes h2 {
+    font-size: 1rem; /* menor título */
+    margin-bottom: 0.5rem;
+  }
+
+  .bloco-branco.doacoes p {
+    font-size: 0.75rem; /* texto menor */
+    margin-bottom: 0.5rem;
+  }
+
+  .doacoes-lista {
+    display: flex;
+    flex-wrap: nowrap; /* todos na mesma linha */
+    overflow-x: auto; /* rolagem horizontal se necessário */
+    gap: 0.4rem;
+    padding: 0;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .doacoes-lista div {
+    flex: 0 0 auto; /* largura fixa mínima */
+    min-width: 80px; 
+    background-color: #f0f4ff;
+    padding: 0.3rem 0.6rem; /* menos espaço vertical e horizontal */
+    border-radius: 6px;
+    font-weight: 600;
+    color: #063970;
+    font-size: 0.7rem; /* fonte menor */
+    text-align: center;
+    line-height: 1.1;
+    white-space: nowrap;
+    transition: transform 0.2s ease;
+  }
+
+  .doacoes-lista div:hover {
+    transform: scale(1.05);
+    background-color: #e0ebff;
+  }
+
+  /* remove barra de rolagem do navegador */
+  .doacoes-lista::-webkit-scrollbar {
+    display: none;
+  }
+}
+
