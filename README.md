@@ -105,9 +105,9 @@ docs: atualiza README com novas etapas
 O projeto está hospedado gratuitamente via **GitHub Pages**:
 
 🔗 **Acesse o site online:**  
-👉 [https://seuusuario.github.io/ong-uniao-alegre/](https://seuusuario.github.io/ong-uniao-alegre/)
+👉 https://giovanniramos11.github.io/ong-uniao-alegre-final/
 
-> *Substitua “seuusuario” pelo seu nome de usuário do GitHub.*
+
 
 ---
 
